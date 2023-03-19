@@ -1,0 +1,28 @@
+# .gitignore
+
+# 環境変数ファイル
+.env
+
+# Python関連
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+*.egg-info/
+dist/
+build/
+*.egg
+*.log
+
+# ディレクトリ内のログファイル
+*.log
+logs/
+
+# エディタ・IDE関連
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.bak
