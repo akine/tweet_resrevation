@@ -1,3 +1,6 @@
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue)
+
 # Tweet Reservation Bot
 
 このリポジトリでは、Tweet Reservation Botが提供されています。
