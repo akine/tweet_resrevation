@@ -40,15 +40,15 @@ async def schedule_tweet(ctx, tweet_text, schedule_time):
         await asyncio.sleep(delay)
         print(f"Done waiting")  # ここにログ出力を追加
         twitter_api.update_status(status=tweet_text)
-        print(f"ツイートが投稿されました: {tweet_text}")  # ログに投稿されたツイートの情報を表示
+        print(f"ツイートが投稿されました なのです: {tweet_text}")  # ログに投稿されたツイートの情報を表示
         await ctx.send(f"ツイートが投稿されました: {tweet_text}")
     except Exception as e:
-        print(f"予約投稿中にエラーが発生しました: {e}")
-        await ctx.send(f"予約投稿中にエラーが発生しました: {e}")
+        print(f"予約投稿中にエラーがなのです: {e}")
+        await ctx.send(f"予約投稿中にエラーがなのです: {e}")
 
 @bot.command(name='ping')
 async def ping(ctx):
-    await ctx.send("Pong!")
+    await ctx.send("Pong! なのです")
 
 @bot.command(name='tweet')
 async def tweet(ctx, timestamp, *tweet_text):
@@ -57,9 +57,9 @@ async def tweet(ctx, timestamp, *tweet_text):
     print(f"Received tweet command: {tweet_text} at {schedule_time}")  # ここにログ出力を追加
 
     if datetime.datetime.now() < schedule_time:
-        await ctx.send(f"予約投稿が完了しました: {schedule_time.strftime('%Y-%m-%d %H:%M')}にツイート予定です。")
+        await ctx.send(f"予約投稿完了なのです: {schedule_time.strftime('%Y-%m-%d %H:%M')}にツイート予定なのです")
         bot.loop.create_task(schedule_tweet(ctx, tweet_text, schedule_time))
     else:
-        await ctx.send("指定された時刻が過去のものです。正しい時刻を指定してください。")
+        await ctx.send("指定された時刻が過去なのです。正しい時刻を指定してください なのです")
 
 bot.run(DISCORD_BOT_TOKEN)
